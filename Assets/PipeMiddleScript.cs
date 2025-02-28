@@ -4,6 +4,8 @@ using UnityEngine;
 public class PipeMiddleScript : MonoBehaviour
 {
     public LogicScript logic;
+
+    public AudioClip coinSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,10 @@ public class PipeMiddleScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
+            AudioSource.PlayClipAtPoint(coinSound, transform.position);
             logic.addScore(1);
+            
+            
         }
     }
 

@@ -132,7 +132,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.33, y: 21.87543}
+  m_Size: {x: 5, y: 21.87543}
   m_EdgeRadius: 0
 --- !u!1 &3721671068309037806
 GameObject:
@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeeb4418e6e48be46be1401475589e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logic: {fileID: 0}
+  coinSound: {fileID: 8300000, guid: e035ae0db6b41a748adf2be48239ee99, type: 3}
 --- !u!1 &5482035583492345626
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,5 +408,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.33, y: 21.87543}
+  m_Size: {x: 5, y: 21.87543}
   m_EdgeRadius: 0

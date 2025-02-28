@@ -7,11 +7,19 @@ public class LogicScript : MonoBehaviour
    public int playerScore;
    public Text scoreText;
    public GameObject gameOverScreen;
+   public BirdScript bird;
+
+    public void Start()
+    {
+        bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
+    }
 
     [ContextMenu("Increase Score")]
    public void addScore(int scoreToAdd){
-    playerScore += scoreToAdd;
-    scoreText.text = playerScore.ToString();
+    if(bird.birdAlive){
+        playerScore += scoreToAdd;
+        scoreText.text = playerScore.ToString();
+    }
    }
     public void restartGame()
     {
@@ -20,9 +28,9 @@ public class LogicScript : MonoBehaviour
 
     public void gameDoness()
     {
-        Debug.Log("THEIS HEAPPEPND");
+
         gameOverScreen.SetActive(true);
-        Debug.Log("_____________DFD___");
+
     }
 
 }
